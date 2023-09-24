@@ -2,7 +2,7 @@
     <div>
         <h1>About Page</h1>
         <h3>counter: {{ counter }}</h3>
-        <button @click="add">计数</button>
+        <el-button type="danger" @click="add">计数</el-button>
     </div>
 </template>
 
