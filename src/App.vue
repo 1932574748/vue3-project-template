@@ -9,6 +9,8 @@
     <br>
     <router-link to="/dialog">弹出框</router-link>
     <br>
+    <router-link to="/dashboard">Echart图</router-link>
+    <br>
     <router-view></router-view>
 </template>
 

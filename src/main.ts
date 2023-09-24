@@ -12,6 +12,9 @@ import pinia from '@/store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
+//4、引入echarts
+import * as echarts from 'echarts'
+
 const app = createApp(App)
 
 //1、route
@@ -20,4 +23,6 @@ app.use(router)
 app.use(pinia)
 //3、element-plus
 app.use(ElementPlus)
+//4、放入全局
+app.config.globalProperties.$echarts = echarts
 app.mount('#app')
