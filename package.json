@@ -10,6 +10,7 @@
     "lint:script": "eslint --ext .jsx,.vue,.tsx,.ts,.js --fix"
   },
   "dependencies": {
+    "pinia": "^2.1.6",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
