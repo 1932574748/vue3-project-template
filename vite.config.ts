@@ -9,6 +9,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 //2-2 自动导入ui-组件 比如说ant-design-vue  element-plus等
 import Components from 'unplugin-vue-components/vite'
 
+//3、vue3语法糖
+import VueSetupExtend from 'vite-plugin-vue-setup-extend'
+
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
@@ -23,6 +26,7 @@ export default defineConfig({
             // 引入组件的,包括自定义组件，存放的位置
             dts: "src/components.d.ts",
         }),
+        VueSetupExtend(),
     ],
 
     //1、 ↓解析配置
