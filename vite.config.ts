@@ -42,7 +42,7 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': { // 匹配请求路径，
-                target: '你要代理的地址', // 代理的目标地址
+                target: 'http://223.75.52.167:21985', // 代理的目标地址
                 // 开发模式，默认的127.0.0.1,开启后代理服务会把origin修改为目标地址
                 changeOrigin: true,
                 // secure: true, // 是否https接口
@@ -53,5 +53,15 @@ export default defineConfig({
                 rewrite: (path) => path.replace(/^\/api/, '')
             }
         }
-    }
+    },
+
+    //打包
+    build: {
+        terserOptions: {
+            compress: {
+                drop_console: true,//去除console相关代码
+                drop_debugger: true,//去除debugger相关代码
+            },
+        },
+    },
 })
