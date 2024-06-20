@@ -1,7 +1,13 @@
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import NProgress from 'nprogress'
-import { Message } from '@element-plus/icons-vue'
-
+import { ElMessage as Message } from 'element-plus'
+//NProgress样式配置
+NProgress.configure({
+    minimum: 0.1,
+    speed: 300,
+    trickle: false,
+    showSpinner: false
+})
 interface ResType<T> {
     code: number
     data?: T
@@ -69,7 +75,7 @@ axios.interceptors.response.use(
                     break;
                 case 404:
                     error.message = '请求错误,未找到该资源'
-                    window.location.href = "/NotFound"
+                    // window.location.href = "/NotFound"
                     break;
                 case 405:
                     error.message = '请求方法未允许'

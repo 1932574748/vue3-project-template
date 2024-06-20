@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import './style.css'
+import './style.css'//初始化样式
+import "nprogress/nprogress.css" //nprogress样式引入
 import App from './App.vue'
 
 //1、route
