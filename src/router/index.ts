@@ -31,22 +31,22 @@ const routesMove = [
     {
         path: '/m/index',
         name: 'MobileHome',//要保持唯一性
-        component: () => import('@/views/index.vue'),
+        component: () => import('@/views/m/index.vue'),
     },
     {
         path: '/m/about',
         name: 'MobileAbout',
-        component: () => import('@/views/about/index.vue')
+        component: () => import('@/views/m/about/index.vue')
     },
     {
         path: '/m/dialog',
         name: 'MobileDialog',
-        component: () => import('@/views/dialog/index.vue')
+        component: () => import('@/views/m/dialog/index.vue')
     },
     {
         path: '/m/dashboard',
         name: 'MobileDashboard',
-        component: () => import('@/views/dashboard/index.vue')
+        component: () => import('@/views/m/dashboard/index.vue')
     },
 
 ]
