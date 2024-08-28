@@ -1,5 +1,6 @@
 <script setup>
 import * as echarts from "echarts"
+import "echarts-gl"
 
 const emits = defineEmits(["onClick"])
 const props = defineProps({
@@ -39,10 +40,13 @@ async function echartsInit() {
   }
   echartsInstance.setOption(props.option)
 }
+// 为窗口加上宽度变化事件，当宽高发生改变时，调用echarts的resize()方法，调整图表尺寸
+window.addEventListener("resize", function () {
+  echartsInstance.resize()
+})
 </script>
 
 <template>
-  123123123
   <div class="echartsContainer" :id="echartsId"></div>
 </template>
 
